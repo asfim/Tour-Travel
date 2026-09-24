@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
                 'slug' => 'bangladesh',
                 'country' => 'Bangladesh',
                 'flag_code' => 'bd',
-                'image_url' => 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=800&q=80',
+                'image_url' => 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80',
                 'description' => 'Explore the scenic beaches of Cox\'s Bazar, cloud kingdom of Sajek, lush tea gardens of Sylhet, and green hills of Bandarban.',
                 'is_popular' => true,
                 'is_featured' => true,
@@ -113,7 +113,7 @@ class DatabaseSeeder extends Seeder
                 'slug' => 'india',
                 'country' => 'India',
                 'flag_code' => 'in',
-                'image_url' => 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80',
+                'image_url' => 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80',
                 'description' => 'Explore the majestic Taj Mahal, snow-clad Kashmir valleys, Darjeeling tea gardens, and vibrant heritage.',
                 'is_popular' => true,
                 'is_featured' => true,
@@ -123,7 +123,7 @@ class DatabaseSeeder extends Seeder
                 'slug' => 'saudi-arabia',
                 'country' => 'Saudi Arabia',
                 'flag_code' => 'sa',
-                'image_url' => 'https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?auto=format&fit=crop&w=800&q=80',
+                'image_url' => 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=800&q=80',
                 'description' => 'Spiritual Hajj & Umrah pilgrimage packages to holy Makkah and Madinah with 5-star hotel options.',
                 'is_popular' => true,
                 'is_featured' => true,
@@ -133,7 +133,7 @@ class DatabaseSeeder extends Seeder
                 'slug' => 'europe',
                 'country' => 'Multiple Europe',
                 'flag_code' => 'eu',
-                'image_url' => 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=80',
+                'image_url' => 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80',
                 'description' => 'Grand Schengen tour covering Paris Eiffel Tower, Swiss Alps snow peaks, Rome Colosseum, and Amsterdam canals.',
                 'is_popular' => false,
                 'is_featured' => true,
@@ -147,14 +147,14 @@ class DatabaseSeeder extends Seeder
 
         // 3. Tour Categories
         $categories = [
-            ['name' => 'Domestic Tours', 'slug' => 'domestic-tours', 'icon_class' => 'bi-geo-alt-fill', 'is_featured' => true, 'image_url' => 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=600&q=80'],
+            ['name' => 'Domestic Tours', 'slug' => 'domestic-tours', 'icon_class' => 'bi-geo-alt-fill', 'is_featured' => true, 'image_url' => 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80'],
             ['name' => 'International Tours', 'slug' => 'international-tours', 'icon_class' => 'bi-airplane-fill', 'is_featured' => true, 'image_url' => 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80'],
             ['name' => 'Honeymoon Packages', 'slug' => 'honeymoon-packages', 'icon_class' => 'bi-heart-fill', 'is_featured' => true, 'image_url' => 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80'],
             ['name' => 'Family Tours', 'slug' => 'family-tours', 'icon_class' => 'bi-people-fill', 'is_featured' => true, 'image_url' => 'https://images.unsplash.com/photo-1506665531195-3566af294817?auto=format&fit=crop&w=600&q=80'],
             ['name' => 'Group Tours', 'slug' => 'group-tours', 'icon_class' => 'bi-person-lines-fill', 'is_featured' => true, 'image_url' => 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=600&q=80'],
             ['name' => 'Corporate Tours', 'slug' => 'corporate-tours', 'icon_class' => 'bi-briefcase-fill', 'is_featured' => true, 'image_url' => 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80'],
             ['name' => 'Adventure Tours', 'slug' => 'adventure-tours', 'icon_class' => 'bi-compass-fill', 'is_featured' => true, 'image_url' => 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80'],
-            ['name' => 'Hajj & Umrah', 'slug' => 'hajj-umrah', 'icon_class' => 'bi-moon-stars-fill', 'is_featured' => true, 'image_url' => 'https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?auto=format&fit=crop&w=600&q=80'],
+            ['name' => 'Hajj & Umrah', 'slug' => 'hajj-umrah', 'icon_class' => 'bi-moon-stars-fill', 'is_featured' => true, 'image_url' => 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=600&q=80'],
         ];
 
         $createdCategories = [];
@@ -256,9 +256,9 @@ class DatabaseSeeder extends Seeder
                 'exclusions' => ['Lunch & Dinner (Seafood packages available)', 'Beach Water Sports Charges'],
                 'hotel_info' => 'Sayeman Beach Resort / Ocean Paradise Hotel & Resort 5-Star.',
                 'transport_info' => 'Hyundai / Scania Business Class AC Coach & Private Sedan Car for Marine Drive.',
-                'cover_image' => 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=1200&q=80',
+                'cover_image' => 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
                 'gallery' => [
-                    'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=800&q=80'
+                    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80'
                 ],
                 'terms_conditions' => 'Standard check-in time 12:00 PM. 100% refund on cancellation 7 days prior.',
                 'is_featured' => true,
@@ -321,9 +321,9 @@ class DatabaseSeeder extends Seeder
                 'exclusions' => ['Air Tickets Dhaka-Kolkata-Srinagar', 'Gulmarg Gondola Tickets', 'Pahalgam Local Taxi Union Charge'],
                 'hotel_info' => 'Houseboat: Royal Group of Houseboats / Hotel: Hotel Grand Mumtaz Srinagar.',
                 'transport_info' => 'Private AC Innova / Sedan for entire Kashmir tour.',
-                'cover_image' => 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80',
+                'cover_image' => 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
                 'gallery' => [
-                    'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80'
+                    'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80'
                 ],
                 'terms_conditions' => 'E-Visa processing takes 3-4 working days.',
                 'is_featured' => true,
@@ -363,9 +363,9 @@ class DatabaseSeeder extends Seeder
                 'exclusions' => ['Food / Meals (Buffet upgrade available)', 'Personal expenses'],
                 'hotel_info' => 'Makkah: Swissôtel Makkah Clock Tower (5-Star) / Madinah: Frontel Al Harithia Hotel (4-Star).',
                 'transport_info' => '2025 Model Mercedes Travego AC Tourist Bus.',
-                'cover_image' => 'https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?auto=format&fit=crop&w=1200&q=80',
+                'cover_image' => 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=1200&q=80',
                 'gallery' => [
-                    'https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?auto=format&fit=crop&w=800&q=80'
+                    'https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=800&q=80'
                 ],
                 'terms_conditions' => 'Passport scan copy with 6+ month validity required. Booking deposit BDT 50,000.',
                 'is_featured' => true,
@@ -570,7 +570,7 @@ class DatabaseSeeder extends Seeder
                 'destination_id' => $createdDestinations['saudi-arabia']->id,
                 'rating' => 4.95,
                 'price_per_night' => 28000,
-                'cover_image' => 'https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?auto=format&fit=crop&w=800&q=80',
+                'cover_image' => 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=800&q=80',
                 'address' => 'Abraj Al Bait Complex, Makkah, Saudi Arabia',
                 'amenities' => ['Direct Haram View', 'Direct Access to Masjid al-Haram', '5-Star Fine Dining', '24-Hour Room Service'],
                 'description' => 'Prestige 5-star hotel attached to Abraj Al Bait Abraj towers directly facing Holy Kaaba.',
@@ -597,7 +597,7 @@ class DatabaseSeeder extends Seeder
                 'title' => 'India Visa Application Guide for Bangladeshi Passport Holders',
                 'slug' => 'india-visa-application-guide-bangladesh',
                 'category' => 'Visa Info',
-                'cover_image' => 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80',
+                'cover_image' => 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80',
                 'excerpt' => 'Step-by-step documentation checklist and IVAC e-token submission process for Indian Tourist Visa.',
                 'content' => 'Applying for an Indian visa from Bangladesh requires accurate documents. Make sure your bank statement has at least BDT 20,000 balance and electricity bill address matches your present address. Attach proper NOC from employer or trade license for businessmen.',
                 'published_at' => now()->subDays(5),
@@ -710,9 +710,9 @@ class DatabaseSeeder extends Seeder
         $gallery = [
             ['title' => 'Burj Khalifa Dubai Marina Sunset', 'category' => 'Destinations', 'image_url' => 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80'],
             ['title' => 'Phi Phi Island Thailand Snorkeling', 'category' => 'Customer Tours', 'image_url' => 'https://images.unsplash.com/photo-1506665531195-3566af294817?auto=format&fit=crop&w=800&q=80'],
-            ['title' => 'Cox\'s Bazar Marine Drive Scenery', 'category' => 'Destinations', 'image_url' => 'https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=800&q=80'],
+            ['title' => 'Cox\'s Bazar Marine Drive Scenery', 'category' => 'Destinations', 'image_url' => 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80'],
             ['title' => 'Sajek Valley Cloud Sunrise', 'category' => 'Group Tours', 'image_url' => 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80'],
-            ['title' => 'Kashmir Dal Lake Houseboat Group', 'category' => 'Group Tours', 'image_url' => 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80'],
+            ['title' => 'Kashmir Dal Lake Houseboat Group', 'category' => 'Group Tours', 'image_url' => 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80'],
             ['title' => 'Maldives Luxury Overwater Villa', 'category' => 'Hotels', 'image_url' => 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80'],
         ];
 

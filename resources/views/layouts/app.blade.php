@@ -30,17 +30,18 @@
     <div class="container">
       <div class="d-flex justify-content-between align-items-center">
         <div class="d-flex gap-4 align-items-center">
-          <span><i class="bi bi-geo-alt-fill text-success me-1"></i> Gulshan 2, Dhaka-1212, Bangladesh</span>
+          <span><i class="bi bi-geo-alt-fill text-success me-1"></i> Gulshan 2, Dhaka-1212</span>
           <a href="tel:+8801712345678"><i class="bi bi-telephone-fill text-success me-1"></i> +880 1712-345678</a>
           <a href="mailto:info@gotravel.com.bd"><i class="bi bi-envelope-fill text-success me-1"></i> info@gotravel.com.bd</a>
+          <span class="topbar-badge"><span class="pulse-dot"></span> 24/7 Support Desk</span>
         </div>
         <div class="d-flex gap-3 align-items-center">
-          <span><i class="bi bi-currency-exchange me-1"></i> BDT (৳)</span>
+          <span class="badge bg-white bg-opacity-10 text-white font-monospace px-2 py-1"><i class="bi bi-currency-exchange me-1 text-warning"></i> BDT (৳)</span>
           <span class="text-white-50">|</span>
-          <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
-          <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
-          <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
-          <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+          <a href="https://facebook.com" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://whatsapp.com" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
     </div>
@@ -49,17 +50,22 @@
   <!-- MAIN NAVIGATION -->
   <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
-        <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center fw-bold" style="width: 42px; height: 42px; font-size: 1.3rem;">GT</div>
-        <span class="brand-text">Go<span>Travel</span></span>
+      <a class="navbar-brand d-flex align-items-center gap-3" href="{{ route('home') }}">
+        <div class="brand-logo-badge">
+          <i class="bi bi-compass-fill"></i>
+        </div>
+        <div>
+          <span class="brand-text">Go<span>Travel</span></span>
+          <span class="brand-tagline">BANGLADESH</span>
+        </div>
       </a>
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
           <li class="nav-item">
             <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
           </li>
@@ -70,15 +76,15 @@
               Tour Packages
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'domestic-tours']) }}"><i class="bi bi-geo-alt me-2 text-success"></i> Domestic Tours</a></li>
-              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'international-tours']) }}"><i class="bi bi-airplane me-2 text-primary"></i> International Tours</a></li>
-              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'honeymoon-packages']) }}"><i class="bi bi-heart me-2 text-danger"></i> Honeymoon Packages</a></li>
-              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'family-tours']) }}"><i class="bi bi-people me-2 text-warning"></i> Family Tours</a></li>
+              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'domestic-tours']) }}"><i class="bi bi-geo-alt-fill me-2 text-success"></i> Domestic Tours</a></li>
+              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'international-tours']) }}"><i class="bi bi-airplane-fill me-2 text-primary"></i> International Tours</a></li>
+              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'honeymoon-packages']) }}"><i class="bi bi-heart-fill me-2 text-danger"></i> Honeymoon Packages</a></li>
+              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'family-tours']) }}"><i class="bi bi-people-fill me-2 text-warning"></i> Family Tours</a></li>
               <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'group-tours']) }}"><i class="bi bi-person-lines-fill me-2 text-info"></i> Group Tours</a></li>
-              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'corporate-tours']) }}"><i class="bi bi-briefcase me-2 text-secondary"></i> Corporate Tours</a></li>
-              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'adventure-tours']) }}"><i class="bi bi-compass me-2 text-success"></i> Adventure Tours</a></li>
+              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'corporate-tours']) }}"><i class="bi bi-briefcase-fill me-2 text-secondary"></i> Corporate Tours</a></li>
+              <li><a class="dropdown-item" href="{{ route('packages.index', ['category' => 'adventure-tours']) }}"><i class="bi bi-tree-fill me-2 text-success"></i> Adventure Tours</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-success fw-bold" href="{{ route('packages.index', ['category' => 'hajj-umrah']) }}"><i class="bi bi-moon-stars me-2"></i> Hajj & Umrah</a></li>
+              <li><a class="dropdown-item text-success fw-bold" href="{{ route('packages.index', ['category' => 'hajj-umrah']) }}"><i class="bi bi-moon-stars-fill me-2"></i> Hajj & Umrah</a></li>
             </ul>
           </li>
 
@@ -106,34 +112,11 @@
               Visa Services
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('visa.index') }}">Tourist Visa</a></li>
-              <li><a class="dropdown-item" href="{{ route('visa.index') }}">Business Visa</a></li>
-              <li><a class="dropdown-item" href="{{ route('visa.index') }}">Student Visa</a></li>
-              <li><a class="dropdown-item" href="{{ route('visa.index') }}">Visa Processing</a></li>
-              <li><a class="dropdown-item" href="{{ route('visa.index') }}">Visa Consultancy</a></li>
-            </ul>
-          </li>
-
-          <!-- Flight Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle {{ request()->routeIs('flights.*') ? 'active' : '' }}" href="{{ route('flights.index') }}" data-bs-toggle="dropdown">
-              Flight
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('flights.index') }}">Flight Booking</a></li>
-              <li><a class="dropdown-item" href="{{ route('flights.index') }}">Flight Schedule</a></li>
-              <li><a class="dropdown-item" href="{{ route('flights.index') }}">Booking Request</a></li>
-            </ul>
-          </li>
-
-          <!-- Hotels Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle {{ request()->routeIs('hotels.*') ? 'active' : '' }}" href="{{ route('hotels.index') }}" data-bs-toggle="dropdown">
-              Hotels
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('hotels.index') }}">Hotel Booking</a></li>
-              <li><a class="dropdown-item" href="{{ route('hotels.index') }}">Hotel Deals</a></li>
+              <li><a class="dropdown-item" href="{{ route('visa.index') }}"><i class="bi bi-ticket-perforated me-2 text-primary"></i> Tourist Visa</a></li>
+              <li><a class="dropdown-item" href="{{ route('visa.index') }}"><i class="bi bi-briefcase me-2 text-dark"></i> Business Visa</a></li>
+              <li><a class="dropdown-item" href="{{ route('visa.index') }}"><i class="bi bi-mortarboard me-2 text-info"></i> Student Visa</a></li>
+              <li><a class="dropdown-item" href="{{ route('visa.index') }}"><i class="bi bi-lightning-charge me-2 text-warning"></i> Fast Track Processing</a></li>
+              <li><a class="dropdown-item" href="{{ route('visa.index') }}"><i class="bi bi-headset me-2 text-success"></i> Visa Consultancy</a></li>
             </ul>
           </li>
 
@@ -143,13 +126,11 @@
               Services
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('services.index') }}">Air Ticketing</a></li>
-              <li><a class="dropdown-item" href="{{ route('services.index') }}">Hotel Booking</a></li>
-              <li><a class="dropdown-item" href="{{ route('services.index') }}">Tour Packages</a></li>
-              <li><a class="dropdown-item" href="{{ route('services.index') }}">Visa Processing</a></li>
-              <li><a class="dropdown-item" href="{{ route('services.index') }}">Airport Transfer</a></li>
-              <li><a class="dropdown-item" href="{{ route('services.index') }}">Travel Insurance</a></li>
-              <li><a class="dropdown-item" href="{{ route('services.index') }}">Car Rental</a></li>
+              <li><a class="dropdown-item" href="{{ route('services.index') }}"><i class="bi bi-compass me-2 text-warning"></i> Tour Packages</a></li>
+              <li><a class="dropdown-item" href="{{ route('services.index') }}"><i class="bi bi-passport me-2 text-danger"></i> Visa Processing</a></li>
+              <li><a class="dropdown-item" href="{{ route('services.index') }}"><i class="bi bi-car-front me-2 text-info"></i> Airport Transfer</a></li>
+              <li><a class="dropdown-item" href="{{ route('services.index') }}"><i class="bi bi-shield-check me-2 text-secondary"></i> Travel Insurance</a></li>
+              <li><a class="dropdown-item" href="{{ route('services.index') }}"><i class="bi bi-car-front-fill me-2 text-dark"></i> Car Rental</a></li>
             </ul>
           </li>
 
@@ -158,20 +139,19 @@
           <li class="nav-item"><a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a></li>
         </ul>
 
-        <div class="d-flex align-items-center gap-2">
+        <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
           @auth
             @if(auth()->user()->role === 'admin')
-              <a href="{{ route('admin.dashboard') }}" class="btn btn-navy-custom py-2 px-3 fs-6">Admin Panel</a>
+              <a href="{{ route('admin.dashboard') }}" class="btn btn-navy-custom py-2 px-4 rounded-pill">Admin Panel</a>
             @else
-              <a href="{{ route('customer.dashboard') }}" class="btn btn-navy-custom py-2 px-3 fs-6"><i class="bi bi-person-circle me-1"></i> Dashboard</a>
+              <a href="{{ route('customer.dashboard') }}" class="btn btn-navy-custom py-2 px-4 rounded-pill"><i class="bi bi-person-circle me-1"></i> Dashboard</a>
             @endif
             <form action="{{ route('logout') }}" method="POST" class="d-inline">
               @csrf
-              <button type="submit" class="btn btn-outline-secondary py-2 px-3"><i class="bi bi-box-arrow-right"></i></button>
+              <button type="submit" class="btn btn-outline-secondary py-2 px-3 rounded-circle" title="Logout"><i class="bi bi-box-arrow-right"></i></button>
             </form>
           @else
-            <a href="{{ route('login') }}" class="btn btn-outline-custom py-2 px-3 me-1">Login</a>
-            <a href="{{ route('packages.index') }}" class="btn btn-primary-custom py-2 px-4">Book Now</a>
+            <a href="{{ route('packages.index') }}" class="btn-header-cta"><i class="bi bi-calendar-check-fill me-1"></i> Book Now</a>
           @endauth
         </div>
       </div>
@@ -288,6 +268,18 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const fallbackImg = 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80';
+      document.querySelectorAll('img').forEach(function(img) {
+        img.addEventListener('error', function() {
+          if (this.src !== fallbackImg) {
+            this.src = fallbackImg;
+          }
+        });
+      });
+    });
+  </script>
   @stack('scripts')
 </body>
 </html>

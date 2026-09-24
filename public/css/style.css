@@ -598,3 +598,220 @@ a {
     align-items: center;
   }
 }
+
+/* NEWSLETTER TROPICAL PALM SECTION */
+.newsletter-section {
+  background-color: #191c1f;
+  padding: 60px 0;
+  position: relative;
+}
+
+.newsletter-card {
+  background: #FAF8F5 url('../images/newsletter-bg.jpg') center center / cover no-repeat;
+  border-radius: 28px;
+  padding: 85px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.newsletter-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+
+.newsletter-subtitle {
+  font-size: 1.1rem;
+  color: #475569;
+  font-weight: 500;
+  margin-bottom: 36px;
+}
+
+.newsletter-form-wrapper {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  background: #FAF8F5;
+  border: 1.5px solid #5ca645;
+  border-radius: 14px;
+  padding: 5px 6px 5px 20px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletter-form:focus-within {
+  border-color: #4fa03a;
+  box-shadow: 0 0 0 4px rgba(92, 166, 69, 0.15);
+}
+
+.newsletter-input {
+  border: none !important;
+  background: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+  flex: 1;
+  font-size: 1.05rem;
+  color: #1e293b;
+  padding: 10px 10px 10px 0;
+}
+
+.newsletter-input::placeholder {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.newsletter-btn {
+  background-color: #58a444;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.newsletter-btn:hover {
+  background-color: #4b9238;
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+@media (max-width: 576px) {
+  .newsletter-card {
+    padding: 60px 20px;
+    border-radius: 20px;
+  }
+  .newsletter-title {
+    font-size: 2rem;
+  }
+  .newsletter-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+}
+
+/* UTILITY HELPERS */
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* TESTIMONIAL CARDS STYLING */
+.testimonial-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px rgba(15, 41, 66, 0.05);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 183, 121, 0.14);
+  border-color: rgba(0, 183, 121, 0.35);
+}
+
+.testimonial-quote-bg {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 4.5rem;
+  color: rgba(0, 183, 121, 0.08);
+  line-height: 1;
+  font-family: Georgia, serif;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-quote-bg {
+  color: rgba(0, 183, 121, 0.18);
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #FFFBEB;
+  color: #D97706;
+  border: 1px solid #FDE68A;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.testimonial-text {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #334155;
+  font-style: italic;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid #F1F5F9;
+}
+
+.testimonial-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00B779;
+  padding: 2px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 183, 121, 0.15);
+}
+
+.testimonial-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0F2942;
+  margin-bottom: 2px;
+}
+
+.testimonial-dest-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #059669;
+  background: #ECFDF5;
+  padding: 3px 10px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+
+

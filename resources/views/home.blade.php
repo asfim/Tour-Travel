@@ -706,7 +706,7 @@
 </section>
 
 <!-- 16. CUSTOMER TESTIMONIALS -->
-<section class="py-5">
+<section class="py-5 bg-light-subtle">
   <div class="container">
     <div class="text-center mb-5">
       <span class="section-tag">Real Traveler Reviews</span>
@@ -717,20 +717,22 @@
     <div class="row g-4">
       @foreach($reviews as $rev)
         <div class="col-lg-4 col-md-6">
-          <div class="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white d-flex flex-column justify-content-between">
+          <div class="testimonial-card">
+            <span class="testimonial-quote-bg">“</span>
             <div>
-              <div class="d-flex text-warning mb-3">
+              <div class="rating-badge">
                 @for($i=0; $i<$rev->rating; $i++)
-                  <i class="bi bi-star-fill me-1"></i>
+                  <i class="bi bi-star-fill"></i>
                 @endfor
+                <span class="ms-1">{{ number_format($rev->rating, 1) }} Star Verified</span>
               </div>
-              <p class="text-muted italic mb-4">"{{ $rev->review_text }}"</p>
+              <p class="testimonial-text">"{{ $rev->review_text }}"</p>
             </div>
-            <div class="d-flex align-items-center gap-3 pt-3 border-top">
-              <img src="{{ $rev->customer_photo }}" alt="{{ $rev->customer_name }}" class="rounded-circle object-fit-cover" style="width: 48px; height: 48px;">
+            <div class="testimonial-user">
+              <img src="{{ $rev->customer_photo }}" alt="{{ $rev->customer_name }}" class="testimonial-avatar">
               <div>
-                <h6 class="fw-bold mb-0">{{ $rev->customer_name }}</h6>
-                <small class="text-success fw-semibold"><i class="bi bi-check-circle-fill me-1"></i> {{ $rev->destination }}</small>
+                <h6 class="testimonial-name">{{ $rev->customer_name }}</h6>
+                <span class="testimonial-dest-badge"><i class="bi bi-patch-check-fill"></i> {{ $rev->destination }}</span>
               </div>
             </div>
           </div>
@@ -787,7 +789,7 @@
             <img src="{{ $g->image_url }}" alt="{{ $g->title }}" class="w-100 h-100 object-fit-cover">
             <div class="position-absolute bottom-0 start-0 end-0 p-3 bg-dark bg-opacity-75 text-white">
               <span class="badge bg-success mb-1">{{ $g->category }}</span>
-              <h6 class="mb-0 fw-bold fs-6">{{ $g->title }}</h6>
+              <h6 class="mb-0 fw-bold fs-6 text-white">{{ $g->title }}</h6>
             </div>
           </div>
         </div>
@@ -803,12 +805,12 @@
     <h2 class="section-title mb-4">Explore Our Travel Stories</h2>
 
     <div class="position-relative mx-auto rounded-4 overflow-hidden shadow-lg" style="max-width: 900px; height: 420px; background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80') center center/cover;">
-      <div class="position-absolute inset-0 bg-dark bg-opacity-50 d-flex flex-column align-items-center justify-content-center text-white">
-        <button type="button" class="btn btn-success btn-lg rounded-circle p-4 mb-3 shadow-lg" data-bs-toggle="modal" data-bs-target="#videoModal" style="width: 80px; height: 80px;">
-          <i class="bi bi-play-fill fs-1"></i>
+      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex flex-column align-items-center justify-content-center text-white p-4">
+        <button type="button" class="btn btn-success rounded-circle mb-3 shadow-lg d-flex align-items-center justify-content-center border-0" data-bs-toggle="modal" data-bs-target="#videoModal" style="width: 76px; height: 76px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <i class="bi bi-play-fill fs-1 ms-1 text-white"></i>
         </button>
-        <h4 class="fw-bold">Watch Experience: Dubai Luxury Desert & City Tour</h4>
-        <p class="text-white-50">GoTravel Official Tour Video Highlights</p>
+        <h4 class="fw-bold text-white mb-2">Watch Experience: Dubai Luxury Desert & City Tour</h4>
+        <p class="text-white-50 mb-0">GoTravel Official Tour Video Highlights</p>
       </div>
     </div>
   </div>
@@ -862,17 +864,19 @@
 </section>
 
 <!-- 21. NEWSLETTER / LEAD SECTION -->
-<section class="py-5 bg-success text-white">
-  <div class="container text-center">
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <i class="bi bi-envelope-paper-fill display-4 mb-3 text-warning"></i>
-        <h2 class="text-white fw-bold">Travel Deals পেতে Subscribe করুন</h2>
-        <p class="text-white-50 mb-4">আমাদের সাপ্তাহিক লেটেস্ট অফার, ডিসকাউন্ট ভাউচার ও ভিসা আপডেট পাওয়ার জন্য আপনার ইমেইল দিন।</p>
-        <form action="{{ route('subscribe') }}" method="POST" class="d-flex gap-2">
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-card">
+      <h2 class="newsletter-title">Join The Newsletter</h2>
+      <p class="newsletter-subtitle">To receive our best monthly deals</p>
+      
+      <div class="newsletter-form-wrapper">
+        <form action="{{ route('subscribe') }}" method="POST" class="newsletter-form">
           @csrf
-          <input type="email" name="email" class="form-control form-control-lg rounded-pill px-4" placeholder="Enter your email address..." required>
-          <button type="submit" class="btn btn-dark btn-lg rounded-pill px-4 fw-bold">Subscribe</button>
+          <input type="email" name="email" class="newsletter-input" placeholder="Enter Your Email..." required>
+          <button type="submit" class="newsletter-btn" title="Subscribe">
+            <i class="bi bi-arrow-right"></i>
+          </button>
         </form>
       </div>
     </div>

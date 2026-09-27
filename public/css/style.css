@@ -865,10 +865,14 @@ a {
     padding-bottom: calc(76px + env(safe-area-inset-bottom));
   }
   .hero-section .badge {
-    display: inline-flex;
+    display: inline-block;
     max-width: 100%;
-    white-space: normal;
-    text-align: left;
+    white-space: normal !important;
+    text-align: center;
+    font-size: 0.8rem !important;
+    line-height: 1.4;
+    padding: 8px 14px !important;
+    border-radius: 12px !important; /* Better shape when text wraps */
   }
   .hero-section {
     padding: 80px 0 100px 0;
